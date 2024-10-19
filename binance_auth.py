@@ -64,15 +64,3 @@ def keep_alive_listen_key(listen_key):
     else:
         print(f"Error refreshing listenKey: {response.json()}")
 
-# Main execution
-# if __name__ == "__main__":
-#     listen_key = get_listen_key()
-
-#     if listen_key:
-#         # Start WebSocket in a separate thread
-#         start_user_data_stream(listen_key)
-
-#         # Keep the listenKey alive every 30 minutes
-#         while True:
-#             time.sleep(30 * 60)  # 30 minutes
-#             keep_alive_listen_key(listen_key)
