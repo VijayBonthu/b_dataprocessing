@@ -1,0 +1,28 @@
+cloud services:
+  platforms:
+  #add required plaforms currently only supports aws, google cloud, azure, uncomment if necessary
+    - AWS
+    # - GOOGLE
+    # - MICROSOFT AZURE
+  config:
+    AWS:
+      user_id: "${AWS_ACCESS_KEY_ID}"
+      password: "${AWS_SECRET_ACCESS_KEY}"
+      Default region name: us-east-1
+      Default output format: json
+      services:
+        - kinesis #provide services that you want to create seperated by - EC2, -Glue etc
+
+    GOOGLE:
+      project_id: "${GOOGLE_PROJECT_ID}"
+      service_account_key: "${GOOGLE_APPLICATION_CREDENTIALS}" # Reference to the JSON key file for service account
+
+    MICROSOFT AZURE:
+      app_id: "${AZURE_APP_ID}"
+      password: "${AZURE_PASSWORD}"
+      tenant_id: "${AZURE_TENANT_ID}"
+
+
+
+
+
